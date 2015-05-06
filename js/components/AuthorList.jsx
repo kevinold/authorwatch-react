@@ -1,4 +1,5 @@
 var React = require('react');
+var Author = require('./Author');
 
 var AuthorWatchApp = React.createClass({
 
@@ -6,7 +7,7 @@ var AuthorWatchApp = React.createClass({
     var authorList = [];
 
     this.props.authors.map(function(author, i) {
-      authorList.push(author)
+      authorList.push(<Author name={author} key={i} />)
     });
 
     return (
