@@ -9,15 +9,15 @@ module.exports = {
       'immutable'
     ],
     app:[
-      'webpack-dev-server/client?http://localhost:8888',
+      'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
-      './js/app.js'
+      './js/app'
     ]
   },
   output: {
     filename: '[name].js',
     path: __dirname + '/dist/js',
-    publicPath: 'http://localhost:8888/dist/js'
+    publicPath: 'http://localhost:8080/dist/js'
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor.js'),
