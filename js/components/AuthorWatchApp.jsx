@@ -1,4 +1,5 @@
 var React = require('react');
+var AuthorList = require('./AuthorList');
 
 var AuthorWatchApp = React.createClass({
 
@@ -15,7 +16,7 @@ var AuthorWatchApp = React.createClass({
         <div className="row">
 
           <div className="col-md-4">
-            
+            <AuthorList authors={this.props.authors} />
           </div>
 
           <div className="col-md-8">
