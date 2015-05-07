@@ -7,6 +7,7 @@ var Author = React.createClass({
     e.preventDefault();
     e.stopPropagation();
     
+    this.props.selectedAuthorCallback(this.props.name);
   }, 
 
   render: function() {
