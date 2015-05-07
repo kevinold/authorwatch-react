@@ -1,15 +1,18 @@
 var React = require('react');
 var AuthorList = require('./AuthorList');
+var BookList = require('./BookList');
 
 var AuthorWatchApp = React.createClass({
   getInitialState: function() {
     return {
-      selectedAuthor: undefined
+      selectedAuthor: undefined,
+      selectedBooks: undefined
     };
   },
 
   handleSelectedAuthor: function(selectedAuthor){
-    this.setState({ selectedAuthor: selectedAuthor });
+    var selectedBooks = this.props.books[selectedAuthor];
+    this.setState({ selectedAuthor: selectedAuthor, selectedBooks: selectedBooks });
   }, 
 
   render: function() {
@@ -29,7 +32,7 @@ var AuthorWatchApp = React.createClass({
           </div>
 
           <div className="col-md-8">
-
+            <BookList books={this.state.selectedBooks} />
           </div>
 
         </div>
