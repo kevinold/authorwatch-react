@@ -13,7 +13,7 @@ var Author = React.createClass({
   render: function() {
     var classes = {
       'list-group-item': true,
-      'active': false
+      'active': this.props.selectedAuthor === this.props.name
     };
     return (
       <li href="#" className={classnames(classes)} onClick={this.handleClick}>

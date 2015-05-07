@@ -7,7 +7,12 @@ var AuthorList = React.createClass({
     var authorList = [];
 
     this.props.authors.map(function(author, i) {
-      authorList.push(<Author name={author} key={i} selectedAuthorCallback={this.props.selectedAuthorCallback} />)
+      authorList.push(<Author
+        name={author}
+        key={i}
+        selectedAuthorCallback={this.props.selectedAuthorCallback}
+        selectedAuthor={this.props.selectedAuthor}
+        />)
     }, this);
 
     return (

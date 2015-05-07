@@ -21,14 +21,14 @@ var AuthorWatchApp = React.createClass({
 
         <div className="row">
           <div className="col-md-4">
-            <h2>AuthorWatch</h2> {this.state.selectedAuthor}
+            <h2>AuthorWatch</h2>
           </div>
         </div>
 
         <div className="row">
 
           <div className="col-md-4">
-            <AuthorList authors={this.props.authors} selectedAuthorCallback={this.handleSelectedAuthor} />
+            <AuthorList authors={this.props.authors} selectedAuthorCallback={this.handleSelectedAuthor} selectedAuthor={this.state.selectedAuthor}/>
           </div>
 
           <div className="col-md-8">
