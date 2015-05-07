@@ -1,7 +1,7 @@
 var React = require('react');
 var Author = require('./Author');
 
-var AuthorWatchApp = React.createClass({
+var AuthorList = React.createClass({
 
   render: function() {
     var authorList = [];
@@ -19,4 +19,4 @@ var AuthorWatchApp = React.createClass({
 
 });
 
-module.exports = AuthorWatchApp;
+module.exports = AuthorList;
